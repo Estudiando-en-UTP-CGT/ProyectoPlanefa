@@ -3,8 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package View;
+package pe.gob.oefa.planefa.datosgenerales.view;
 
+import pe.gob.oefa.planefa.programacionsupervision.view.frmProgramacionSupervision;
+import View.PlanefaSingleton;
 import java.util.Date;
 import pe.gob.oefa.planefa.bo.catalogo.Ambito;
 import pe.gob.oefa.planefa.bo.catalogo.ClasificacionMef;
@@ -19,10 +21,10 @@ import pe.gob.oefa.planefa.bo.planefa.Planefa;
  *
  * @author Daniel
  */
-public class JFDatosGenerales extends javax.swing.JFrame {
+public class frmDatosGenerales extends javax.swing.JFrame {
 
     private Planefa planefa;
-    public JFDatosGenerales() {
+    public frmDatosGenerales() {
         initComponents();
         this.planefa = PlanefaSingleton.getInstance();
     }
@@ -36,80 +38,80 @@ public class JFDatosGenerales extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel2 = new javax.swing.JLabel();
+        lblTitulo = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
-        jRadioButton1 = new javax.swing.JRadioButton();
-        jRadioButton2 = new javax.swing.JRadioButton();
-        jRadioButton3 = new javax.swing.JRadioButton();
-        jRadioButton4 = new javax.swing.JRadioButton();
-        jRadioButton5 = new javax.swing.JRadioButton();
+        rbSupervision = new javax.swing.JRadioButton();
+        rbDatosGenerales = new javax.swing.JRadioButton();
+        rbAmbientales = new javax.swing.JRadioButton();
+        rbPotestadSancionadora1 = new javax.swing.JRadioButton();
+        rbSancionadora2 = new javax.swing.JRadioButton();
         jPanel3 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
+        lblDatosGenerales = new javax.swing.JLabel();
+        lblNombreEfa = new javax.swing.JLabel();
         txtNombreEfa = new javax.swing.JTextField();
-        jLabel4 = new javax.swing.JLabel();
+        lblAnioPlanefa = new javax.swing.JLabel();
         txtAnio = new javax.swing.JTextField();
-        jLabel5 = new javax.swing.JLabel();
+        lblTipoEfa = new javax.swing.JLabel();
         cmbTipoEfa = new javax.swing.JComboBox<>();
         jPanel4 = new javax.swing.JPanel();
-        jLabel6 = new javax.swing.JLabel();
+        lblDatosIngresar = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
+        txtDatosIngresar = new javax.swing.JTextArea();
         jPanel5 = new javax.swing.JPanel();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
+        lblLineamientos = new javax.swing.JLabel();
+        lblLink = new javax.swing.JLabel();
+        lblAnexoPlanefa = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         btnSiguiente = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel2.setBackground(new java.awt.Color(240, 240, 204));
-        jLabel2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel2.setText("Plan anual de actividades 2020 (MUNICIPALIDAD PROVINCIAL 1 - 22012)");
-        jLabel2.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        lblTitulo.setBackground(new java.awt.Color(240, 240, 204));
+        lblTitulo.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        lblTitulo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblTitulo.setText("Plan anual de actividades 2020 (MUNICIPALIDAD PROVINCIAL 1 - 22012)");
+        lblTitulo.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
         jPanel1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
-        jRadioButton1.setForeground(new java.awt.Color(102, 102, 102));
-        jRadioButton1.setText("Programación de la supervisión");
-        jRadioButton1.addActionListener(new java.awt.event.ActionListener() {
+        rbSupervision.setForeground(new java.awt.Color(102, 102, 102));
+        rbSupervision.setText("Programación de la supervisión");
+        rbSupervision.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton1ActionPerformed(evt);
+                rbSupervisionActionPerformed(evt);
             }
         });
 
-        jRadioButton2.setForeground(new java.awt.Color(0, 204, 51));
-        jRadioButton2.setSelected(true);
-        jRadioButton2.setText("Datos General");
-        jRadioButton2.addActionListener(new java.awt.event.ActionListener() {
+        rbDatosGenerales.setForeground(new java.awt.Color(0, 204, 51));
+        rbDatosGenerales.setSelected(true);
+        rbDatosGenerales.setText("Datos General");
+        rbDatosGenerales.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton2ActionPerformed(evt);
+                rbDatosGeneralesActionPerformed(evt);
             }
         });
 
-        jRadioButton3.setForeground(new java.awt.Color(102, 102, 102));
-        jRadioButton3.setText("Programación de evaluaciones ambientales");
-        jRadioButton3.addActionListener(new java.awt.event.ActionListener() {
+        rbAmbientales.setForeground(new java.awt.Color(102, 102, 102));
+        rbAmbientales.setText("Programación de evaluaciones ambientales");
+        rbAmbientales.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton3ActionPerformed(evt);
+                rbAmbientalesActionPerformed(evt);
             }
         });
 
-        jRadioButton4.setForeground(new java.awt.Color(102, 102, 102));
-        jRadioButton4.setText("Programación del ejercicio de la potestad sancionadora l");
-        jRadioButton4.addActionListener(new java.awt.event.ActionListener() {
+        rbPotestadSancionadora1.setForeground(new java.awt.Color(102, 102, 102));
+        rbPotestadSancionadora1.setText("Programación del ejercicio de la potestad sancionadora l");
+        rbPotestadSancionadora1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton4ActionPerformed(evt);
+                rbPotestadSancionadora1ActionPerformed(evt);
             }
         });
 
-        jRadioButton5.setForeground(new java.awt.Color(102, 102, 102));
-        jRadioButton5.setText("Programación del ejercicio de la potestad sancionadora ll");
-        jRadioButton5.addActionListener(new java.awt.event.ActionListener() {
+        rbSancionadora2.setForeground(new java.awt.Color(102, 102, 102));
+        rbSancionadora2.setText("Programación del ejercicio de la potestad sancionadora ll");
+        rbSancionadora2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton5ActionPerformed(evt);
+                rbSancionadora2ActionPerformed(evt);
             }
         });
 
@@ -119,15 +121,15 @@ public class JFDatosGenerales extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jRadioButton2)
+                .addComponent(rbDatosGenerales)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jRadioButton1)
+                .addComponent(rbSupervision)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jRadioButton4)
+                .addComponent(rbPotestadSancionadora1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jRadioButton5)
+                .addComponent(rbSancionadora2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jRadioButton3)
+                .addComponent(rbAmbientales)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -135,27 +137,27 @@ public class JFDatosGenerales extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jRadioButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jRadioButton4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jRadioButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jRadioButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jRadioButton5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addComponent(rbAmbientales, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(rbPotestadSancionadora1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(rbSupervision, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(rbDatosGenerales, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(rbSancionadora2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
 
         jPanel3.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel1.setText("Datos Generales");
+        lblDatosGenerales.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        lblDatosGenerales.setText("Datos Generales");
 
-        jLabel3.setText("Nombre de la EFA *");
+        lblNombreEfa.setText("Nombre de la EFA *");
 
         txtNombreEfa.setText("22012 - MUNICIPALIDAD PROVINCIAL 1");
 
-        jLabel4.setText("Año del PLANEFA *");
+        lblAnioPlanefa.setText("Año del PLANEFA *");
 
         txtAnio.setText("2020");
 
-        jLabel5.setText("Tipo de EFA *");
+        lblTipoEfa.setText("Tipo de EFA *");
 
         cmbTipoEfa.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "LOCAL" }));
         cmbTipoEfa.addActionListener(new java.awt.event.ActionListener() {
@@ -171,12 +173,12 @@ public class JFDatosGenerales extends javax.swing.JFrame {
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel1)
-                    .addComponent(jLabel3)
+                    .addComponent(lblDatosGenerales)
+                    .addComponent(lblNombreEfa)
                     .addComponent(txtNombreEfa, javax.swing.GroupLayout.PREFERRED_SIZE, 321, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel4)
+                    .addComponent(lblAnioPlanefa)
                     .addComponent(txtAnio, javax.swing.GroupLayout.PREFERRED_SIZE, 321, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel5)
+                    .addComponent(lblTipoEfa)
                     .addComponent(cmbTipoEfa, javax.swing.GroupLayout.PREFERRED_SIZE, 321, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(0, 22, Short.MAX_VALUE))
         );
@@ -184,17 +186,17 @@ public class JFDatosGenerales extends javax.swing.JFrame {
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel1)
+                .addComponent(lblDatosGenerales)
                 .addGap(18, 18, 18)
-                .addComponent(jLabel3)
+                .addComponent(lblNombreEfa)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(txtNombreEfa, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(13, 13, 13)
-                .addComponent(jLabel4)
+                .addComponent(lblAnioPlanefa)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(txtAnio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel5)
+                .addComponent(lblTipoEfa)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(cmbTipoEfa, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(133, Short.MAX_VALUE))
@@ -202,14 +204,14 @@ public class JFDatosGenerales extends javax.swing.JFrame {
 
         jPanel4.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
-        jLabel6.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel6.setText("Guia de datos a ingresar");
+        lblDatosIngresar.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        lblDatosIngresar.setText("Guia de datos a ingresar");
 
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        jTextArea1.setText("*I  Programación de supervisiones\n\n*II Programación del ejercicio de la potestad sancionadora\n  +a.Programación del ejercicio de la potestad\n     sancionadora I.\n  +b.Programación del ejercicio de la potestad\n     sancionadora II.\n\n*III Programación de evaluaciones ambientales\n\n*IV  Plan de instrumentos normativos\n  +a.Plan de instrumentos normativos I\n  +b.Plan de instrumentos normativos II\n");
-        jTextArea1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jScrollPane1.setViewportView(jTextArea1);
+        txtDatosIngresar.setColumns(20);
+        txtDatosIngresar.setRows(5);
+        txtDatosIngresar.setText("*I  Programación de supervisiones\n\n*II Programación del ejercicio de la potestad sancionadora\n  +a.Programación del ejercicio de la potestad\n     sancionadora I.\n  +b.Programación del ejercicio de la potestad\n     sancionadora II.\n\n*III Programación de evaluaciones ambientales\n\n*IV  Plan de instrumentos normativos\n  +a.Plan de instrumentos normativos I\n  +b.Plan de instrumentos normativos II\n");
+        txtDatosIngresar.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jScrollPane1.setViewportView(txtDatosIngresar);
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
@@ -220,7 +222,7 @@ public class JFDatosGenerales extends javax.swing.JFrame {
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 412, Short.MAX_VALUE)
                     .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addComponent(jLabel6)
+                        .addComponent(lblDatosIngresar)
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
@@ -228,7 +230,7 @@ public class JFDatosGenerales extends javax.swing.JFrame {
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel6)
+                .addComponent(lblDatosIngresar)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jScrollPane1)
                 .addContainerGap())
@@ -236,16 +238,16 @@ public class JFDatosGenerales extends javax.swing.JFrame {
 
         jPanel5.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
-        jLabel7.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel7.setText("Lineamientos");
+        lblLineamientos.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        lblLineamientos.setText("Lineamientos");
 
-        jLabel8.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(0, 0, 255));
-        jLabel8.setText("Resolución N° 004-2010 - DEFACO-EL-PERUANO");
+        lblLink.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        lblLink.setForeground(new java.awt.Color(0, 0, 255));
+        lblLink.setText("Resolución N° 004-2010 - DEFACO-EL-PERUANO");
 
-        jLabel9.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel9.setForeground(new java.awt.Color(0, 0, 255));
-        jLabel9.setText("* Anexo - PLANEFA");
+        lblAnexoPlanefa.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        lblAnexoPlanefa.setForeground(new java.awt.Color(0, 0, 255));
+        lblAnexoPlanefa.setText("* Anexo - PLANEFA");
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
@@ -254,20 +256,20 @@ public class JFDatosGenerales extends javax.swing.JFrame {
             .addGroup(jPanel5Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel7)
-                    .addComponent(jLabel8)
-                    .addComponent(jLabel9))
+                    .addComponent(lblLineamientos)
+                    .addComponent(lblLink)
+                    .addComponent(lblAnexoPlanefa))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel5Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel7)
+                .addComponent(lblLineamientos)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel8)
+                .addComponent(lblLink)
                 .addGap(18, 18, 18)
-                .addComponent(jLabel9)
+                .addComponent(lblAnexoPlanefa)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -304,7 +306,7 @@ public class JFDatosGenerales extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(lblTitulo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanel2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
@@ -319,7 +321,7 @@ public class JFDatosGenerales extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(lblTitulo, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -335,26 +337,26 @@ public class JFDatosGenerales extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton1ActionPerformed
+    private void rbSupervisionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbSupervisionActionPerformed
 
         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton1ActionPerformed
+    }//GEN-LAST:event_rbSupervisionActionPerformed
 
-    private void jRadioButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton2ActionPerformed
+    private void rbDatosGeneralesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbDatosGeneralesActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton2ActionPerformed
+    }//GEN-LAST:event_rbDatosGeneralesActionPerformed
 
-    private void jRadioButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton3ActionPerformed
+    private void rbAmbientalesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbAmbientalesActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton3ActionPerformed
+    }//GEN-LAST:event_rbAmbientalesActionPerformed
 
-    private void jRadioButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton4ActionPerformed
+    private void rbPotestadSancionadora1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbPotestadSancionadora1ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton4ActionPerformed
+    }//GEN-LAST:event_rbPotestadSancionadora1ActionPerformed
 
-    private void jRadioButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton5ActionPerformed
+    private void rbSancionadora2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbSancionadora2ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton5ActionPerformed
+    }//GEN-LAST:event_rbSancionadora2ActionPerformed
 
     private void cmbTipoEfaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmbTipoEfaActionPerformed
         // TODO add your handling code here:
@@ -376,7 +378,7 @@ public class JFDatosGenerales extends javax.swing.JFrame {
       this.planefa.setEfa(efa);
       this.planefa.setPeriodo(periodo);
       
-      JFProgramacionSupervision abrirProgramacionsupervision =  new JFProgramacionSupervision();
+      frmProgramacionSupervision abrirProgramacionsupervision =  new frmProgramacionSupervision();
       abrirProgramacionsupervision.setVisible(true);
     }//GEN-LAST:event_btnSiguienteActionPerformed
 
@@ -397,20 +399,21 @@ public class JFDatosGenerales extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(JFDatosGenerales.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(frmDatosGenerales.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(JFDatosGenerales.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(frmDatosGenerales.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(JFDatosGenerales.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(frmDatosGenerales.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(JFDatosGenerales.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(frmDatosGenerales.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new JFDatosGenerales().setVisible(true);
+                new frmDatosGenerales().setVisible(true);
             }
         });
     }
@@ -418,28 +421,28 @@ public class JFDatosGenerales extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnSiguiente;
     private javax.swing.JComboBox<String> cmbTipoEfa;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
-    private javax.swing.JRadioButton jRadioButton1;
-    private javax.swing.JRadioButton jRadioButton2;
-    private javax.swing.JRadioButton jRadioButton3;
-    private javax.swing.JRadioButton jRadioButton4;
-    private javax.swing.JRadioButton jRadioButton5;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextArea jTextArea1;
+    private javax.swing.JLabel lblAnexoPlanefa;
+    private javax.swing.JLabel lblAnioPlanefa;
+    private javax.swing.JLabel lblDatosGenerales;
+    private javax.swing.JLabel lblDatosIngresar;
+    private javax.swing.JLabel lblLineamientos;
+    private javax.swing.JLabel lblLink;
+    private javax.swing.JLabel lblNombreEfa;
+    private javax.swing.JLabel lblTipoEfa;
+    private javax.swing.JLabel lblTitulo;
+    private javax.swing.JRadioButton rbAmbientales;
+    private javax.swing.JRadioButton rbDatosGenerales;
+    private javax.swing.JRadioButton rbPotestadSancionadora1;
+    private javax.swing.JRadioButton rbSancionadora2;
+    private javax.swing.JRadioButton rbSupervision;
     private javax.swing.JTextField txtAnio;
+    private javax.swing.JTextArea txtDatosIngresar;
     private javax.swing.JTextField txtNombreEfa;
     // End of variables declaration//GEN-END:variables
 }

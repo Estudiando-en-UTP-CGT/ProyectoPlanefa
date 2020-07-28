@@ -3,8 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package View;
+package pe.gob.oefa.planefa.programacionsupervision.view;
 
+import View.PlanefaSingleton;
+import pe.gob.oefa.planefa.programacionsancionadora1.view.frmProgramacionSancionadora1;
 import java.util.List;
 import javax.swing.JTable;
 import org.bson.Document;
@@ -20,10 +22,10 @@ import pe.gob.oefa.planefa.bo.planefa.Planefa;
  *
  * @author Daniel
  */
-public class JFProgramacionSupervision extends javax.swing.JFrame {
+public class frmProgramacionSupervision extends javax.swing.JFrame {
 
     private Planefa planefa;
-    public JFProgramacionSupervision() {
+    public frmProgramacionSupervision() {
         initComponents();
         this.planefa = PlanefaSingleton.getInstance();
     }
@@ -39,20 +41,20 @@ public class JFProgramacionSupervision extends javax.swing.JFrame {
 
         jLabel2 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
-        jRadioButton1 = new javax.swing.JRadioButton();
-        jRadioButton2 = new javax.swing.JRadioButton();
-        jRadioButton3 = new javax.swing.JRadioButton();
-        jRadioButton4 = new javax.swing.JRadioButton();
-        jRadioButton5 = new javax.swing.JRadioButton();
+        rbSupervision = new javax.swing.JRadioButton();
+        rbDatosGenerales = new javax.swing.JRadioButton();
+        rbEvaluacionesAmbientales = new javax.swing.JRadioButton();
+        rbSancionadora1 = new javax.swing.JRadioButton();
+        rbSancionadora2 = new javax.swing.JRadioButton();
         jPanel5 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         tblActividades = new javax.swing.JTable();
-        jLabel1 = new javax.swing.JLabel();
+        lblProgramacionSupervisiones = new javax.swing.JLabel();
         btnNuevo = new javax.swing.JButton();
         btnRefrescar = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        btnSiguiente = new javax.swing.JButton();
+        btnAnterior = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -64,44 +66,44 @@ public class JFProgramacionSupervision extends javax.swing.JFrame {
 
         jPanel1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
-        jRadioButton1.setForeground(new java.awt.Color(0, 204, 51));
-        jRadioButton1.setSelected(true);
-        jRadioButton1.setText("Programación de la supervisión");
-        jRadioButton1.addActionListener(new java.awt.event.ActionListener() {
+        rbSupervision.setForeground(new java.awt.Color(0, 204, 51));
+        rbSupervision.setSelected(true);
+        rbSupervision.setText("Programación de la supervisión");
+        rbSupervision.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton1ActionPerformed(evt);
+                rbSupervisionActionPerformed(evt);
             }
         });
 
-        jRadioButton2.setForeground(new java.awt.Color(102, 102, 102));
-        jRadioButton2.setText("Datos General");
-        jRadioButton2.addActionListener(new java.awt.event.ActionListener() {
+        rbDatosGenerales.setForeground(new java.awt.Color(102, 102, 102));
+        rbDatosGenerales.setText("Datos General");
+        rbDatosGenerales.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton2ActionPerformed(evt);
+                rbDatosGeneralesActionPerformed(evt);
             }
         });
 
-        jRadioButton3.setForeground(new java.awt.Color(102, 102, 102));
-        jRadioButton3.setText("Programación de evaluaciones ambientales");
-        jRadioButton3.addActionListener(new java.awt.event.ActionListener() {
+        rbEvaluacionesAmbientales.setForeground(new java.awt.Color(102, 102, 102));
+        rbEvaluacionesAmbientales.setText("Programación de evaluaciones ambientales");
+        rbEvaluacionesAmbientales.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton3ActionPerformed(evt);
+                rbEvaluacionesAmbientalesActionPerformed(evt);
             }
         });
 
-        jRadioButton4.setForeground(new java.awt.Color(102, 102, 102));
-        jRadioButton4.setText("Programación del ejercicio de la potestad sancionadora l");
-        jRadioButton4.addActionListener(new java.awt.event.ActionListener() {
+        rbSancionadora1.setForeground(new java.awt.Color(102, 102, 102));
+        rbSancionadora1.setText("Programación del ejercicio de la potestad sancionadora l");
+        rbSancionadora1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton4ActionPerformed(evt);
+                rbSancionadora1ActionPerformed(evt);
             }
         });
 
-        jRadioButton5.setForeground(new java.awt.Color(102, 102, 102));
-        jRadioButton5.setText("Programación del ejercicio de la potestad sancionadora ll");
-        jRadioButton5.addActionListener(new java.awt.event.ActionListener() {
+        rbSancionadora2.setForeground(new java.awt.Color(102, 102, 102));
+        rbSancionadora2.setText("Programación del ejercicio de la potestad sancionadora ll");
+        rbSancionadora2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton5ActionPerformed(evt);
+                rbSancionadora2ActionPerformed(evt);
             }
         });
 
@@ -111,15 +113,15 @@ public class JFProgramacionSupervision extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jRadioButton2)
+                .addComponent(rbDatosGenerales)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jRadioButton1)
+                .addComponent(rbSupervision)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jRadioButton4)
+                .addComponent(rbSancionadora1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jRadioButton5)
+                .addComponent(rbSancionadora2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jRadioButton3)
+                .addComponent(rbEvaluacionesAmbientales)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -127,11 +129,11 @@ public class JFProgramacionSupervision extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jRadioButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jRadioButton4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jRadioButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jRadioButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jRadioButton5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addComponent(rbEvaluacionesAmbientales, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(rbSancionadora1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(rbSupervision, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(rbDatosGenerales, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(rbSancionadora2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
 
         jPanel5.setBorder(javax.swing.BorderFactory.createEtchedBorder());
@@ -160,8 +162,8 @@ public class JFProgramacionSupervision extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(tblActividades);
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel1.setText("Programación de supervisiones (*) ");
+        lblProgramacionSupervisiones.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        lblProgramacionSupervisiones.setText("Programación de supervisiones (*) ");
 
         btnNuevo.setText("+ NUEVO");
         btnNuevo.addActionListener(new java.awt.event.ActionListener() {
@@ -170,7 +172,7 @@ public class JFProgramacionSupervision extends javax.swing.JFrame {
             }
         });
 
-        btnRefrescar.setText("+ NUEVO");
+        btnRefrescar.setText("+ REFRESCAR");
         btnRefrescar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 btnRefrescarMouseClicked(evt);
@@ -187,7 +189,7 @@ public class JFProgramacionSupervision extends javax.swing.JFrame {
                 .addContainerGap())
             .addGroup(jPanel5Layout.createSequentialGroup()
                 .addGap(360, 360, 360)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 247, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(lblProgramacionSupervisiones, javax.swing.GroupLayout.PREFERRED_SIZE, 247, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(btnNuevo)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -199,7 +201,7 @@ public class JFProgramacionSupervision extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
                 .addGap(27, 27, 27)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblProgramacionSupervisiones, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnNuevo)
                     .addComponent(btnRefrescar))
                 .addGap(18, 18, 18)
@@ -209,17 +211,17 @@ public class JFProgramacionSupervision extends javax.swing.JFrame {
 
         jPanel2.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
-        jButton1.setText("SIGUIENTE");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        btnSiguiente.setText("SIGUIENTE");
+        btnSiguiente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                btnSiguienteActionPerformed(evt);
             }
         });
 
-        jButton2.setText("ANTERIOR");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        btnAnterior.setText("ANTERIOR");
+        btnAnterior.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                btnAnteriorActionPerformed(evt);
             }
         });
 
@@ -229,9 +231,9 @@ public class JFProgramacionSupervision extends javax.swing.JFrame {
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton2)
+                .addComponent(btnAnterior)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton1)
+                .addComponent(btnSiguiente)
                 .addContainerGap())
         );
         jPanel2Layout.setVerticalGroup(
@@ -239,8 +241,8 @@ public class JFProgramacionSupervision extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
-                    .addComponent(jButton2))
+                    .addComponent(btnSiguiente)
+                    .addComponent(btnAnterior))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -274,42 +276,42 @@ public class JFProgramacionSupervision extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton1ActionPerformed
+    private void rbSupervisionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbSupervisionActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton1ActionPerformed
+    }//GEN-LAST:event_rbSupervisionActionPerformed
 
-    private void jRadioButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton2ActionPerformed
+    private void rbDatosGeneralesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbDatosGeneralesActionPerformed
 
         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton2ActionPerformed
+    }//GEN-LAST:event_rbDatosGeneralesActionPerformed
 
-    private void jRadioButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton3ActionPerformed
+    private void rbEvaluacionesAmbientalesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbEvaluacionesAmbientalesActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton3ActionPerformed
+    }//GEN-LAST:event_rbEvaluacionesAmbientalesActionPerformed
 
-    private void jRadioButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton4ActionPerformed
+    private void rbSancionadora1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbSancionadora1ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton4ActionPerformed
+    }//GEN-LAST:event_rbSancionadora1ActionPerformed
 
-    private void jRadioButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton5ActionPerformed
+    private void rbSancionadora2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbSancionadora2ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton5ActionPerformed
+    }//GEN-LAST:event_rbSancionadora2ActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void btnAnteriorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAnteriorActionPerformed
         this.setVisible(false);
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_btnAnteriorActionPerformed
 
     private void btnNuevoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNuevoActionPerformed
         
-        JFProgramacionSupervisionEditar registro = new JFProgramacionSupervisionEditar();
+        frmProgramacionSupervisionEditar registro = new frmProgramacionSupervisionEditar();
         registro.setVisible(true);                
     }//GEN-LAST:event_btnNuevoActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        JFProgramacionSancionadora1 abrir = new JFProgramacionSancionadora1();
+    private void btnSiguienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSiguienteActionPerformed
+        frmProgramacionSancionadora1 abrir = new frmProgramacionSancionadora1();
         abrir.setVisible(true);
         this.setVisible(false);
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_btnSiguienteActionPerformed
 
     
     private void btnRefrescarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnRefrescarMouseClicked
@@ -387,14 +389,18 @@ public class JFProgramacionSupervision extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(JFProgramacionSupervision.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(frmProgramacionSupervision.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(JFProgramacionSupervision.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(frmProgramacionSupervision.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(JFProgramacionSupervision.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(frmProgramacionSupervision.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(JFProgramacionSupervision.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(frmProgramacionSupervision.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
@@ -403,27 +409,27 @@ public class JFProgramacionSupervision extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new JFProgramacionSupervision().setVisible(true);
+                new frmProgramacionSupervision().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnAnterior;
     private javax.swing.JButton btnNuevo;
     private javax.swing.JButton btnRefrescar;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JButton btnSiguiente;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel5;
-    private javax.swing.JRadioButton jRadioButton1;
-    private javax.swing.JRadioButton jRadioButton2;
-    private javax.swing.JRadioButton jRadioButton3;
-    private javax.swing.JRadioButton jRadioButton4;
-    private javax.swing.JRadioButton jRadioButton5;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JLabel lblProgramacionSupervisiones;
+    private javax.swing.JRadioButton rbDatosGenerales;
+    private javax.swing.JRadioButton rbEvaluacionesAmbientales;
+    private javax.swing.JRadioButton rbSancionadora1;
+    private javax.swing.JRadioButton rbSancionadora2;
+    private javax.swing.JRadioButton rbSupervision;
     private javax.swing.JTable tblActividades;
     // End of variables declaration//GEN-END:variables
 }

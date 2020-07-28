@@ -3,30 +3,19 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package View;
-
-import java.util.List;
-import javax.swing.JTextField;
-import org.bson.Document;
-import pe.gob.oefa.planefa.bo.actividad.Actividad;
-import pe.gob.oefa.planefa.bo.actividad.ActividadSupervision;
-import pe.gob.oefa.planefa.bo.catalogo.ActividadOperativa;
-import pe.gob.oefa.planefa.bo.catalogo.ObjetoSupervision;
-import pe.gob.oefa.planefa.bo.catalogo.Sector;
-import pe.gob.oefa.planefa.bo.catalogo.UnidadMedida;
-import pe.gob.oefa.planefa.bo.planefa.Planefa;
-import pe.gob.oefa.planefa.mongodb.MongoDatabaseCliente;
+package pe.gob.oefa.planefa.programacionsancionadora2.view;
 
 /**
  *
  * @author Daniel
  */
-public class JFProgramacionSupervisionEditar extends javax.swing.JFrame {
+public class frmProgramacionSancionadora2Editar extends javax.swing.JFrame {
 
-    private Planefa planefa;
-    public JFProgramacionSupervisionEditar() {
+    /**
+     * Creates new form JFDatosGenerales
+     */
+    public frmProgramacionSancionadora2Editar() {
         initComponents();
-        this.planefa = PlanefaSingleton.getInstance();
     }
 
     /**
@@ -38,34 +27,32 @@ public class JFProgramacionSupervisionEditar extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel2 = new javax.swing.JLabel();
+        lblTitulo = new javax.swing.JLabel();
         jPanel5 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        cmbActividadOperativa = new javax.swing.JComboBox<>();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jComboBox2 = new javax.swing.JComboBox<>();
-        jLabel6 = new javax.swing.JLabel();
-        jComboBox3 = new javax.swing.JComboBox<>();
-        cbmSector = new javax.swing.JComboBox<>();
+        lblEditarSancionadora2 = new javax.swing.JLabel();
+        cbActividadOperativa = new javax.swing.JComboBox<>();
+        lblSector = new javax.swing.JLabel();
+        txtSector = new javax.swing.JTextField();
+        lblUnidadMedida = new javax.swing.JLabel();
+        cbUnidadMedida = new javax.swing.JComboBox<>();
+        lblActividadOperativa = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
-        btnCancelar = new javax.swing.JButton();
-        btnAceptar = new javax.swing.JButton();
+        cbmCancelar = new javax.swing.JButton();
+        cbmAceptar = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
-        jLabel11 = new javax.swing.JLabel();
-        jLabel12 = new javax.swing.JLabel();
-        jLabel13 = new javax.swing.JLabel();
-        jLabel14 = new javax.swing.JLabel();
-        jLabel15 = new javax.swing.JLabel();
-        jLabel16 = new javax.swing.JLabel();
-        jLabel17 = new javax.swing.JLabel();
-        jLabel18 = new javax.swing.JLabel();
-        jLabel19 = new javax.swing.JLabel();
+        lblProgramacionMensual = new javax.swing.JLabel();
+        lblDiciembre = new javax.swing.JLabel();
+        lblNoviembre = new javax.swing.JLabel();
+        lblEnero = new javax.swing.JLabel();
+        lblFebrero = new javax.swing.JLabel();
+        lblMarzo = new javax.swing.JLabel();
+        lblAbril = new javax.swing.JLabel();
+        lblMayo = new javax.swing.JLabel();
+        lblJunio = new javax.swing.JLabel();
+        lblJulio = new javax.swing.JLabel();
+        lblAgosto = new javax.swing.JLabel();
+        lblSetiembre = new javax.swing.JLabel();
+        lblOctubre = new javax.swing.JLabel();
         txtJunio = new javax.swing.JTextField();
         txtMayo = new javax.swing.JTextField();
         txtAbril = new javax.swing.JTextField();
@@ -75,43 +62,52 @@ public class JFProgramacionSupervisionEditar extends javax.swing.JFrame {
         txtDiciembre = new javax.swing.JTextField();
         txtNoviembre = new javax.swing.JTextField();
         txtOctubre = new javax.swing.JTextField();
-        txtSeptiembre = new javax.swing.JTextField();
+        txtSetiembre = new javax.swing.JTextField();
         txtAgosto = new javax.swing.JTextField();
         txtJulio = new javax.swing.JTextField();
+        jPanel3 = new javax.swing.JPanel();
+        lblPresupuestoAnual = new javax.swing.JLabel();
+        txtPresupuestoAnual = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel2.setBackground(new java.awt.Color(240, 240, 204));
-        jLabel2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel2.setText("Plan anual de actividades 2020 (MUNICIPALIDAD PROVINCIAL 1 - 22012)");
-        jLabel2.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        lblTitulo.setBackground(new java.awt.Color(240, 240, 204));
+        lblTitulo.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        lblTitulo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblTitulo.setText("Plan anual de actividades 2020 (MUNICIPALIDAD PROVINCIAL 1 - 22012)");
+        lblTitulo.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
         jPanel5.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel1.setText("Programación de supervisiones >> Editar");
+        lblEditarSancionadora2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        lblEditarSancionadora2.setText("Programación del ejercicio de la potestad sancionadora >> Editar");
 
-        jLabel3.setText("Actividad operativa *");
-
-        cmbActividadOperativa.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "SUPERVISIÓN" }));
-
-        jLabel4.setText("Sector *");
-
-        jLabel5.setText("Objeto de la supervisión *");
-
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "RUIDO" }));
-
-        jLabel6.setText("Unidad de medida *");
-
-        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "INFORME DE SUPERVISIÓN" }));
-        jComboBox3.addActionListener(new java.awt.event.ActionListener() {
+        cbActividadOperativa.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Emisión de resoluciones finales de primera instancia de procedimientos iniciados el año" }));
+        cbActividadOperativa.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox3ActionPerformed(evt);
+                cbActividadOperativaActionPerformed(evt);
             }
         });
 
-        cbmSector.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "SUPERVISIÓN" }));
+        lblSector.setText("Sector *");
+
+        txtSector.setText("Dato no requerido para su caso");
+        txtSector.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtSectorActionPerformed(evt);
+            }
+        });
+
+        lblUnidadMedida.setText("Unidad de medida *");
+
+        cbUnidadMedida.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Expediente concluido" }));
+        cbUnidadMedida.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbUnidadMedidaActionPerformed(evt);
+            }
+        });
+
+        lblActividadOperativa.setText("Actividad Operativa *");
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
@@ -120,58 +116,51 @@ public class JFProgramacionSupervisionEditar extends javax.swing.JFrame {
             .addGroup(jPanel5Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(cmbActividadOperativa, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jComboBox2, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jComboBox3, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(lblEditarSancionadora2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(txtSector)
+                    .addComponent(cbActividadOperativa, 0, 437, Short.MAX_VALUE)
+                    .addComponent(cbUnidadMedida, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(jPanel5Layout.createSequentialGroup()
                         .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 308, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jLabel3)
-                                .addComponent(jLabel4)
-                                .addComponent(jLabel5))
-                            .addComponent(jLabel6))
-                        .addGap(0, 129, Short.MAX_VALUE))
-                    .addComponent(cbmSector, javax.swing.GroupLayout.Alignment.TRAILING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(lblSector)
+                            .addComponent(lblUnidadMedida)
+                            .addComponent(lblActividadOperativa, javax.swing.GroupLayout.PREFERRED_SIZE, 352, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel5Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1)
+                .addGap(6, 6, 6)
+                .addComponent(lblEditarSancionadora2)
+                .addGap(4, 4, 4)
+                .addComponent(lblActividadOperativa)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel3)
+                .addComponent(cbActividadOperativa, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(cmbActividadOperativa, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(lblSector)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel4)
+                .addComponent(txtSector, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(cbmSector, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(11, 11, 11)
-                .addComponent(jLabel5)
+                .addComponent(lblUnidadMedida)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel6)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(27, Short.MAX_VALUE))
+                .addComponent(cbUnidadMedida, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jPanel2.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
-        btnCancelar.setText("CANCELAR");
-        btnCancelar.addActionListener(new java.awt.event.ActionListener() {
+        cbmCancelar.setText("CANCELAR");
+        cbmCancelar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnCancelarActionPerformed(evt);
+                cbmCancelarActionPerformed(evt);
             }
         });
 
-        btnAceptar.setText("ACEPTAR");
-        btnAceptar.addActionListener(new java.awt.event.ActionListener() {
+        cbmAceptar.setText("ACEPTAR");
+        cbmAceptar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAceptarActionPerformed(evt);
+                cbmAceptarActionPerformed(evt);
             }
         });
 
@@ -180,10 +169,10 @@ public class JFProgramacionSupervisionEditar extends javax.swing.JFrame {
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(btnAceptar)
+                .addContainerGap(277, Short.MAX_VALUE)
+                .addComponent(cbmAceptar)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(btnCancelar)
+                .addComponent(cbmCancelar)
                 .addContainerGap())
         );
         jPanel2Layout.setVerticalGroup(
@@ -191,54 +180,54 @@ public class JFProgramacionSupervisionEditar extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnCancelar)
-                    .addComponent(btnAceptar))
+                    .addComponent(cbmCancelar)
+                    .addComponent(cbmAceptar))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jPanel1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
-        jLabel7.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel7.setText("Programación mensual");
+        lblProgramacionMensual.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        lblProgramacionMensual.setText("Programación mensual");
 
-        jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel8.setText("Diciembre *");
+        lblDiciembre.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblDiciembre.setText("Diciembre *");
 
-        jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel9.setText("Noviembre *");
+        lblNoviembre.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblNoviembre.setText("Noviembre *");
 
-        jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel10.setText("Enero *");
+        lblEnero.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblEnero.setText("Enero *");
 
-        jLabel11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel11.setText("Febrero *");
+        lblFebrero.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblFebrero.setText("Febrero *");
 
-        jLabel12.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel12.setText("Marzo *");
+        lblMarzo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblMarzo.setText("Marzo *");
 
-        jLabel13.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel13.setText("Abril *");
+        lblAbril.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblAbril.setText("Abril *");
 
-        jLabel14.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel14.setText("Mayo *");
+        lblMayo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblMayo.setText("Mayo *");
 
-        jLabel15.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel15.setText("Junio *");
+        lblJunio.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblJunio.setText("Junio *");
 
-        jLabel16.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel16.setText("Julio *");
+        lblJulio.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblJulio.setText("Julio *");
 
-        jLabel17.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel17.setText("Agosto *");
+        lblAgosto.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblAgosto.setText("Agosto *");
 
-        jLabel18.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel18.setText("Setiembre *");
+        lblSetiembre.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblSetiembre.setText("Setiembre *");
 
-        jLabel19.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel19.setText("Octubre *");
+        lblOctubre.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblOctubre.setText("Octubre *");
 
         txtJunio.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-        txtJunio.setText("2");
+        txtJunio.setText("0");
         txtJunio.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtJunioActionPerformed(evt);
@@ -246,10 +235,10 @@ public class JFProgramacionSupervisionEditar extends javax.swing.JFrame {
         });
 
         txtMayo.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-        txtMayo.setText("2");
+        txtMayo.setText("0");
 
         txtAbril.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-        txtAbril.setText("2");
+        txtAbril.setText("0");
         txtAbril.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtAbrilActionPerformed(evt);
@@ -257,13 +246,18 @@ public class JFProgramacionSupervisionEditar extends javax.swing.JFrame {
         });
 
         txtMarzo.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-        txtMarzo.setText("2");
+        txtMarzo.setText("1");
 
         txtFebrero.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-        txtFebrero.setText("2");
+        txtFebrero.setText("1");
 
         txtEnero.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-        txtEnero.setText("2");
+        txtEnero.setText("1");
+        txtEnero.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtEneroActionPerformed(evt);
+            }
+        });
 
         txtDiciembre.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         txtDiciembre.setText("0");
@@ -272,16 +266,16 @@ public class JFProgramacionSupervisionEditar extends javax.swing.JFrame {
         txtNoviembre.setText("0");
 
         txtOctubre.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-        txtOctubre.setText("2");
+        txtOctubre.setText("0");
 
-        txtSeptiembre.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-        txtSeptiembre.setText("2");
+        txtSetiembre.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        txtSetiembre.setText("0");
 
         txtAgosto.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-        txtAgosto.setText("2");
+        txtAgosto.setText("0");
 
         txtJulio.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-        txtJulio.setText("2");
+        txtJulio.setText("0");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -291,30 +285,30 @@ public class JFProgramacionSupervisionEditar extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel7)
+                        .addComponent(lblProgramacionMensual)
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                                 .addGap(0, 0, Short.MAX_VALUE)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(jLabel10, javax.swing.GroupLayout.DEFAULT_SIZE, 62, Short.MAX_VALUE)
+                                    .addComponent(lblEnero, javax.swing.GroupLayout.DEFAULT_SIZE, 62, Short.MAX_VALUE)
                                     .addComponent(txtEnero))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(jLabel11, javax.swing.GroupLayout.DEFAULT_SIZE, 62, Short.MAX_VALUE)
+                                    .addComponent(lblFebrero, javax.swing.GroupLayout.DEFAULT_SIZE, 62, Short.MAX_VALUE)
                                     .addComponent(txtFebrero))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(jLabel12, javax.swing.GroupLayout.DEFAULT_SIZE, 62, Short.MAX_VALUE)
+                                    .addComponent(lblMarzo, javax.swing.GroupLayout.DEFAULT_SIZE, 62, Short.MAX_VALUE)
                                     .addComponent(txtMarzo))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addComponent(txtAbril, javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jLabel13, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 62, Short.MAX_VALUE)))
+                                    .addComponent(lblAbril, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 62, Short.MAX_VALUE)))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(jLabel16, javax.swing.GroupLayout.DEFAULT_SIZE, 62, Short.MAX_VALUE)
+                                    .addComponent(lblJulio, javax.swing.GroupLayout.DEFAULT_SIZE, 62, Short.MAX_VALUE)
                                     .addComponent(txtJulio))
                                 .addGap(13, 13, 13)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -322,46 +316,46 @@ public class JFProgramacionSupervisionEditar extends javax.swing.JFrame {
                                         .addComponent(txtAgosto, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                            .addComponent(txtSeptiembre)
-                                            .addComponent(jLabel18, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                                    .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addComponent(txtSetiembre)
+                                            .addComponent(lblSetiembre, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                                    .addComponent(lblAgosto, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(txtOctubre, javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jLabel19, javax.swing.GroupLayout.DEFAULT_SIZE, 67, Short.MAX_VALUE))))
+                                    .addComponent(lblOctubre, javax.swing.GroupLayout.DEFAULT_SIZE, 67, Short.MAX_VALUE))))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(jLabel14, javax.swing.GroupLayout.DEFAULT_SIZE, 62, Short.MAX_VALUE)
+                                    .addComponent(lblMayo, javax.swing.GroupLayout.DEFAULT_SIZE, 62, Short.MAX_VALUE)
                                     .addComponent(txtMayo))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addComponent(txtJunio)
-                                    .addComponent(jLabel15, javax.swing.GroupLayout.DEFAULT_SIZE, 62, Short.MAX_VALUE)))
+                                    .addComponent(lblJunio, javax.swing.GroupLayout.DEFAULT_SIZE, 62, Short.MAX_VALUE)))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(jLabel9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(lblNoviembre, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                     .addComponent(txtNoviembre))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addComponent(txtDiciembre)
-                                    .addComponent(jLabel8, javax.swing.GroupLayout.DEFAULT_SIZE, 62, Short.MAX_VALUE))))
+                                    .addComponent(lblDiciembre, javax.swing.GroupLayout.DEFAULT_SIZE, 62, Short.MAX_VALUE))))
                         .addGap(22, 22, 22))))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel7)
+                .addComponent(lblProgramacionMensual)
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel10)
-                    .addComponent(jLabel12)
-                    .addComponent(jLabel14)
-                    .addComponent(jLabel11)
-                    .addComponent(jLabel13)
-                    .addComponent(jLabel15))
+                    .addComponent(lblEnero)
+                    .addComponent(lblMarzo)
+                    .addComponent(lblMayo)
+                    .addComponent(lblFebrero)
+                    .addComponent(lblAbril)
+                    .addComponent(lblJunio))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtJunio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -372,21 +366,51 @@ public class JFProgramacionSupervisionEditar extends javax.swing.JFrame {
                     .addComponent(txtEnero, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel16)
-                    .addComponent(jLabel17)
-                    .addComponent(jLabel18)
-                    .addComponent(jLabel19)
-                    .addComponent(jLabel9)
-                    .addComponent(jLabel8))
+                    .addComponent(lblJulio)
+                    .addComponent(lblAgosto)
+                    .addComponent(lblSetiembre)
+                    .addComponent(lblOctubre)
+                    .addComponent(lblNoviembre)
+                    .addComponent(lblDiciembre))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtDiciembre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txtNoviembre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txtOctubre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtSeptiembre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtSetiembre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txtAgosto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txtJulio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(47, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        jPanel3.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+
+        lblPresupuestoAnual.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        lblPresupuestoAnual.setText("Presupuesto anual (S/.)");
+
+        txtPresupuestoAnual.setText("3,000.00");
+
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addComponent(lblPresupuestoAnual, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addComponent(txtPresupuestoAnual))
+                .addContainerGap())
+        );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(lblPresupuestoAnual)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(txtPresupuestoAnual, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -395,23 +419,29 @@ public class JFProgramacionSupervisionEditar extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(14, 14, 14)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(jPanel5, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 461, Short.MAX_VALUE)
-                    .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(lblTitulo, javax.swing.GroupLayout.DEFAULT_SIZE, 461, Short.MAX_VALUE)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(lblTitulo, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -427,48 +457,30 @@ public class JFProgramacionSupervisionEditar extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtAbrilActionPerformed
 
-    private void btnAceptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAceptarActionPerformed
-        try {
-            //Actividad de supervisión
-            ActividadOperativa actividadOperativa = new ActividadOperativa("100", "Supervisión");
-            Sector sector = new Sector("200", "Minería");
-            ObjetoSupervision objetoSupervision = new ObjetoSupervision("300", "Vertimientos");
-            UnidadMedida unidadMedida = new UnidadMedida("400", "Informe de Supervisión");
-
-            ActividadSupervision actividad = new ActividadSupervision(actividadOperativa, sector, objetoSupervision, unidadMedida);
-            actividad.setProgramacionEnero(Util.convertirAEntero(this.txtEnero));
-            actividad.setProgramacionFebrero(Util.convertirAEntero(this.txtFebrero));
-            actividad.setProgramacionMarzo(Util.convertirAEntero(this.txtMarzo));
-            actividad.setProgramacionAbril(Util.convertirAEntero(this.txtAbril));
-            actividad.setProgramacionMayo(Util.convertirAEntero(this.txtMayo));
-            actividad.setProgramacionJunio(Util.convertirAEntero(this.txtJunio));
-            actividad.setProgramacionJulio(Util.convertirAEntero(this.txtJulio));
-            actividad.setProgramacionAgosto(Util.convertirAEntero(this.txtAgosto));
-            actividad.setProgramacionSeptiembre(Util.convertirAEntero(this.txtSeptiembre));
-            actividad.setProgramacionOctubre(Util.convertirAEntero(this.txtOctubre));
-            actividad.setProgramacionNoviembre(Util.convertirAEntero(this.txtNoviembre));
-            actividad.setProgramacionDiciembre(Util.convertirAEntero(this.txtDiciembre));
-            this.planefa.getActividadesSupervision().agregar((ActividadSupervision)actividad.clone());
-            //MongoDatabaseCliente.getColeccion("planefa")
-            
-
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-            
-        this.setVisible(false);
-    }//GEN-LAST:event_btnAceptarActionPerformed
-
-    private void btnCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelarActionPerformed
-        this.setVisible(false);
-    }//GEN-LAST:event_btnCancelarActionPerformed
-
-    private void jComboBox3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox3ActionPerformed
+    private void cbActividadOperativaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbActividadOperativaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox3ActionPerformed
+    }//GEN-LAST:event_cbActividadOperativaActionPerformed
 
-    
-    
+    private void cbUnidadMedidaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbUnidadMedidaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cbUnidadMedidaActionPerformed
+
+    private void txtEneroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtEneroActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtEneroActionPerformed
+
+    private void cbmAceptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbmAceptarActionPerformed
+        this.setVisible(false);
+    }//GEN-LAST:event_cbmAceptarActionPerformed
+
+    private void cbmCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbmCancelarActionPerformed
+        this.setVisible(false);
+    }//GEN-LAST:event_cbmCancelarActionPerformed
+
+    private void txtSectorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtSectorActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtSectorActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -486,14 +498,22 @@ public class JFProgramacionSupervisionEditar extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(JFProgramacionSupervisionEditar.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(frmProgramacionSancionadora2Editar.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(JFProgramacionSupervisionEditar.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(frmProgramacionSancionadora2Editar.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(JFProgramacionSupervisionEditar.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(frmProgramacionSancionadora2Editar.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(JFProgramacionSupervisionEditar.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(frmProgramacionSancionadora2Editar.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
@@ -506,40 +526,39 @@ public class JFProgramacionSupervisionEditar extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new JFProgramacionSupervisionEditar().setVisible(true);
+                new frmProgramacionSancionadora2Editar().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnAceptar;
-    private javax.swing.JButton btnCancelar;
-    private javax.swing.JComboBox<String> cbmSector;
-    private javax.swing.JComboBox<String> cmbActividadOperativa;
-    private javax.swing.JComboBox<String> jComboBox2;
-    private javax.swing.JComboBox<String> jComboBox3;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel15;
-    private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel17;
-    private javax.swing.JLabel jLabel18;
-    private javax.swing.JLabel jLabel19;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
+    private javax.swing.JComboBox<String> cbActividadOperativa;
+    private javax.swing.JComboBox<String> cbUnidadMedida;
+    private javax.swing.JButton cbmAceptar;
+    private javax.swing.JButton cbmCancelar;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel5;
+    private javax.swing.JLabel lblAbril;
+    private javax.swing.JLabel lblActividadOperativa;
+    private javax.swing.JLabel lblAgosto;
+    private javax.swing.JLabel lblDiciembre;
+    private javax.swing.JLabel lblEditarSancionadora2;
+    private javax.swing.JLabel lblEnero;
+    private javax.swing.JLabel lblFebrero;
+    private javax.swing.JLabel lblJulio;
+    private javax.swing.JLabel lblJunio;
+    private javax.swing.JLabel lblMarzo;
+    private javax.swing.JLabel lblMayo;
+    private javax.swing.JLabel lblNoviembre;
+    private javax.swing.JLabel lblOctubre;
+    private javax.swing.JLabel lblPresupuestoAnual;
+    private javax.swing.JLabel lblProgramacionMensual;
+    private javax.swing.JLabel lblSector;
+    private javax.swing.JLabel lblSetiembre;
+    private javax.swing.JLabel lblTitulo;
+    private javax.swing.JLabel lblUnidadMedida;
     private javax.swing.JTextField txtAbril;
     private javax.swing.JTextField txtAgosto;
     private javax.swing.JTextField txtDiciembre;
@@ -551,7 +570,9 @@ public class JFProgramacionSupervisionEditar extends javax.swing.JFrame {
     private javax.swing.JTextField txtMayo;
     private javax.swing.JTextField txtNoviembre;
     private javax.swing.JTextField txtOctubre;
-    private javax.swing.JTextField txtSeptiembre;
+    private javax.swing.JTextField txtPresupuestoAnual;
+    private javax.swing.JTextField txtSector;
+    private javax.swing.JTextField txtSetiembre;
     // End of variables declaration//GEN-END:variables
 }
 

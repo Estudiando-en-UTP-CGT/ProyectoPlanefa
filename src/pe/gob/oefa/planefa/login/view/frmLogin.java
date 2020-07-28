@@ -5,7 +5,7 @@
  */
 package pe.gob.oefa.planefa.login.view;
 
-import View.JFDatosGenerales;
+import pe.gob.oefa.planefa.datosgenerales.view.frmDatosGenerales;
 
 /**
  *
@@ -195,7 +195,7 @@ public class frmLogin extends javax.swing.JFrame {
 
     private void btnIngresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIngresarActionPerformed
         
-      JFDatosGenerales abrirDatosgenerales =  new JFDatosGenerales();
+      frmDatosGenerales abrirDatosgenerales =  new frmDatosGenerales();
       abrirDatosgenerales.setVisible(true);
       this.setVisible(false);
         

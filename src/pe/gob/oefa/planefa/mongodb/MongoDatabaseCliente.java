@@ -10,7 +10,7 @@ import org.bson.Document;
 
 public class MongoDatabaseCliente {
     
-    private MongoDatabaseCliente(){}
+    MongoDatabaseCliente(){}
     
     private static class MongoDatabaseClienteHelper{
         private static final MongoDatabase INSTANCE = getDatabase();
