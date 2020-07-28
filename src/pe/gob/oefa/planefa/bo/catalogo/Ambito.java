@@ -1,6 +1,7 @@
 
 package pe.gob.oefa.planefa.bo.catalogo;
 
+
 public class Ambito extends Catalogo{
         
     public Ambito(String codigo, String nombre) {

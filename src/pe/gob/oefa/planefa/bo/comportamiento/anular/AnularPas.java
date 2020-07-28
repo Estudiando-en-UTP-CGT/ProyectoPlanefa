@@ -1,4 +1,3 @@
-
 package pe.gob.oefa.planefa.bo.comportamiento.anular;
 
 import pe.gob.oefa.planefa.bo.actividad.Actividad;

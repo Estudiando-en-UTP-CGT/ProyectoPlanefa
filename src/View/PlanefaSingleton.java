@@ -14,6 +14,7 @@ public class PlanefaSingleton {
         return PlanefaSingletonHelper.INSTANCE;
     }
     
+    
     public static Planefa getNewInstance(){
         PlanefaSingletonHelper.INSTANCE = new Planefa();
         return PlanefaSingletonHelper.INSTANCE;

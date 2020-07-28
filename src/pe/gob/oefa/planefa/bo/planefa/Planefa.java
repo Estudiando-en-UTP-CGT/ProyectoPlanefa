@@ -1,4 +1,3 @@
-
 package pe.gob.oefa.planefa.bo.planefa;
 
 import java.util.Date;

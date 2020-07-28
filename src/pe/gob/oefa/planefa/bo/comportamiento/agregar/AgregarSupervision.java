@@ -1,4 +1,3 @@
-
 package pe.gob.oefa.planefa.bo.comportamiento.agregar;
 
 import java.util.logging.Level;

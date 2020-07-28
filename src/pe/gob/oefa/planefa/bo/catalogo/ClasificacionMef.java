@@ -1,6 +1,7 @@
 
 package pe.gob.oefa.planefa.bo.catalogo;
 
+
 public class ClasificacionMef extends Catalogo{
         
     public ClasificacionMef(String codigo, String nombre) {

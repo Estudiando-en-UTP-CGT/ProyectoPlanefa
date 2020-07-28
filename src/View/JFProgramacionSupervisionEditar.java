@@ -105,6 +105,11 @@ public class JFProgramacionSupervisionEditar extends javax.swing.JFrame {
         jLabel6.setText("Unidad de medida *");
 
         jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "INFORME DE SUPERVISIÓN" }));
+        jComboBox3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBox3ActionPerformed(evt);
+            }
+        });
 
         cbmSector.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "SUPERVISIÓN" }));
 
@@ -458,6 +463,10 @@ public class JFProgramacionSupervisionEditar extends javax.swing.JFrame {
         this.setVisible(false);
     }//GEN-LAST:event_btnCancelarActionPerformed
 
+    private void jComboBox3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBox3ActionPerformed
+
     
     
     /**
@@ -545,3 +554,4 @@ public class JFProgramacionSupervisionEditar extends javax.swing.JFrame {
     private javax.swing.JTextField txtSeptiembre;
     // End of variables declaration//GEN-END:variables
 }
+

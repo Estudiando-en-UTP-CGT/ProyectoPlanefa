@@ -4,6 +4,7 @@ import pe.gob.oefa.planefa.bo.catalogo.ActividadOperativa;
 import pe.gob.oefa.planefa.bo.catalogo.UnidadMedida;
 import pe.gob.oefa.planefa.bo.catalogo.TipoEvaluacion;
 
+
 public class ActividadEvaluacion extends Actividad{
     private ActividadOperativa actividadOperativa;
     private TipoEvaluacion tipoEvaluacion;    

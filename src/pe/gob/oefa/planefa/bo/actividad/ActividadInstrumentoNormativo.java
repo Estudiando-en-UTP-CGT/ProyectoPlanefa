@@ -1,5 +1,6 @@
 package pe.gob.oefa.planefa.bo.actividad;
 
+
 import pe.gob.oefa.planefa.bo.catalogo.FuncionNormada;
 
 public class ActividadInstrumentoNormativo extends Actividad{

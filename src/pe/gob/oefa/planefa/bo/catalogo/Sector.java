@@ -1,5 +1,6 @@
 package pe.gob.oefa.planefa.bo.catalogo;
 
+
 public class Sector extends Catalogo{
    
     public Sector(String codigo, String nombre) {

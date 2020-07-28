@@ -91,6 +91,11 @@ public class JFProgramacionSancionadora2Editar extends javax.swing.JFrame {
         jLabel4.setText("Sector *");
 
         jTextField1.setText("Dato no requerido para su caso");
+        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField1ActionPerformed(evt);
+            }
+        });
 
         jLabel6.setText("Unidad de medida *");
 
@@ -466,6 +471,10 @@ public class JFProgramacionSancionadora2Editar extends javax.swing.JFrame {
         this.setVisible(false);
     }//GEN-LAST:event_jButton1ActionPerformed
 
+    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -551,3 +560,4 @@ public class JFProgramacionSancionadora2Editar extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField9;
     // End of variables declaration//GEN-END:variables
 }
+

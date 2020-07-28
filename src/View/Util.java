@@ -16,6 +16,7 @@ public class Util {
         return Integer.parseInt(textField.getText());
     }
     
+    
     public static Double convertirADouble(JTextField textField ){
         return Double.parseDouble(textField.getText());
     }

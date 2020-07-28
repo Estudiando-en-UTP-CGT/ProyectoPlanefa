@@ -279,6 +279,7 @@ public class JFProgramacionSupervision extends javax.swing.JFrame {
     }//GEN-LAST:event_jRadioButton1ActionPerformed
 
     private void jRadioButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton2ActionPerformed
+
         // TODO add your handling code here:
     }//GEN-LAST:event_jRadioButton2ActionPerformed
 

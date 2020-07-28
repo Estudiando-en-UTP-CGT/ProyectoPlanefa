@@ -1,5 +1,6 @@
 package pe.gob.oefa.planefa.bo.catalogo;
 
+
 public class UnidadMedida extends Catalogo{
    
     public UnidadMedida(String codigo, String nombre) {

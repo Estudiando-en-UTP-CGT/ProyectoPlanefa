@@ -17,6 +17,7 @@ public abstract class Actividad implements Cloneable{
     private Integer programacionDiciembre;
     private Double presupuestoAnual;
 
+    
     public Actividad (){}
     
     public Actividad(Integer programacionEnero, Integer programacionFebrero, Integer programacionMarzo, Integer programacionAbril, Integer programacionMayo, Integer programacionJunio, Integer programacionJulio, Integer programacionAgosto, Integer programacionSeptiembre, Integer programacionOctubre, Integer programacionNoviembre, Integer programacionDiciembre, Double presupuestoAnual) {

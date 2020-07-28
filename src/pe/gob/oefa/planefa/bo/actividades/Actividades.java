@@ -1,6 +1,7 @@
 
 package pe.gob.oefa.planefa.bo.actividades;
 
+
 import pe.gob.oefa.planefa.bo.actividad.Actividad;
 import java.util.List;
 import pe.gob.oefa.planefa.bo.comportamiento.actualizar.ComportamientoActualizar;

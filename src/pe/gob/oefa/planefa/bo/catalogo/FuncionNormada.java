@@ -1,6 +1,7 @@
 
 package pe.gob.oefa.planefa.bo.catalogo;
 
+
 public class FuncionNormada extends Catalogo{
    
     public FuncionNormada(String codigo, String nombre) {

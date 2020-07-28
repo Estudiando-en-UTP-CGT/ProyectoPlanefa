@@ -165,6 +165,7 @@ public class JFProgramacionSancionadora1Editar extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jTextField14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField14ActionPerformed
+
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField14ActionPerformed
 

@@ -1,6 +1,7 @@
 
 package pe.gob.oefa.planefa.bo.catalogo;
 
+
 public class TipoGobierno extends Catalogo{
         
     public TipoGobierno(String codigo, String nombre) {

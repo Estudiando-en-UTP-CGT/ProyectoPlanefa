@@ -479,6 +479,7 @@ public class JFProgramacionEvaluacionesAmbientalesEditar extends javax.swing.JFr
     }//GEN-LAST:event_jComboBox2ActionPerformed
 
     private void jTextField6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField6ActionPerformed
+
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField6ActionPerformed
 

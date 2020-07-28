@@ -1,5 +1,6 @@
 package pe.gob.oefa.planefa.bo.catalogo;
 
+
 public class TipoEvaluacion extends Catalogo{
    
     public TipoEvaluacion(String codigo, String nombre) {

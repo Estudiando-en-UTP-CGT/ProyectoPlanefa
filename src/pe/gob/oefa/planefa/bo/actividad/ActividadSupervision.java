@@ -1,5 +1,6 @@
 package pe.gob.oefa.planefa.bo.actividad;
 
+
 import pe.gob.oefa.planefa.bo.catalogo.ActividadOperativa;
 import pe.gob.oefa.planefa.bo.catalogo.UnidadMedida;
 import pe.gob.oefa.planefa.bo.catalogo.ObjetoSupervision;

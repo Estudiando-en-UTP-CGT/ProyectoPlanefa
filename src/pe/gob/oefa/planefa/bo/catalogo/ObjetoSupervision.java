@@ -1,5 +1,6 @@
 package pe.gob.oefa.planefa.bo.catalogo;
 
+
 public class ObjetoSupervision extends Catalogo{
     
     public ObjetoSupervision(String codigo, String nombre) {
